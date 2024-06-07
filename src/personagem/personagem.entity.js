@@ -1,4 +1,5 @@
 const Joi = require('joi');
+const joi = require('joi');
 
 const personagem = Joi.object({
     nome: Joi
