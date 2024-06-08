@@ -1,7 +1,6 @@
 const Joi = require('joi');
-const joi = require('joi');
 
-const personagem = Joi.object({
+const aparelho = Joi.object({
     nome: Joi
         .string()
         .min(1)
@@ -12,11 +11,11 @@ const personagem = Joi.object({
         .uri()
         .required(),
 
-    evoluiPara: Joi.string()
+    preco: Joi.string()
         .min(1)
         .max(30)
         .optional()
 
 });
 
-module.exports = personagem
+module.exports = aparelho

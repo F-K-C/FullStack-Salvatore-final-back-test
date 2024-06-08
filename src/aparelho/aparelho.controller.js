@@ -1,5 +1,5 @@
-const personagem = require('./personagem.entity')
-const service = require('./personagem.service')
+const aparelho = require('./aparelho.entity')
+const service = require('./aparelho.service')
 
 async function readAll(req, res) {
     const items = await service.readAll()
@@ -20,7 +20,7 @@ async function readById(req, res) {
 }
 
 async function create(req, res) {
-    const {error, value: newItem } = personagem.validate(req.body)
+    const {error, value: newItem } = aparelho.validate(req.body)
 
     if (error) {
         return res.status(400).send({error: error.details[0].message})
@@ -32,7 +32,7 @@ async function create(req, res) {
 async function updateById(req, res) {
     const id = req.params.id
 
-    const {error, value: newItem } = personagem.validate(req.body)
+    const {error, value: newItem } = aparelho.validate(req.body)
 
     if (error) {
         return res.status(400).send({error: error.details[0].message})

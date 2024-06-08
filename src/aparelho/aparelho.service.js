@@ -2,7 +2,7 @@ const { ObjectId } = require('mongodb')
 const { getDataBase } = require('../db/database-connection')
 
 function getCollection() {
-    return getDataBase().collection('personagem')
+    return getDataBase().collection('aparelho')
 }
 
 function readAll() {

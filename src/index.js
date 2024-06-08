@@ -4,7 +4,7 @@ const { connectToDatabase } = require('./db/database-connection')
 const cors = require('cors')
 require('express-async-errors')
 
-const personagemRouter = require('./personagem/personagem.router')
+const aparelhoRouter = require('./aparelho/aparelho.router')
 
 async function main() {
 
@@ -19,7 +19,7 @@ async function main() {
         res.send('Hello World')
     })
 
-    app.use('/personagem', personagemRouter)
+    app.use('/aparelho', aparelhoRouter)
 
     app.use(function (err, req, res, next) {
         console.error(err.stack);
