@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb')
 
 const dbUrl = process.env.DATABASE_URL
-const dbName = 'mongodb-integrar-com-frontend'
+const dbName = 'mongodb-final-back-test'
 
 const client = new MongoClient(dbUrl)
 
